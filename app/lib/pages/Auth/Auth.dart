@@ -1,6 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../app/appBarApp.dart';
+import '../../app/generics.dart';
+import '../../app/generics.dart';
+import '../../app/generics.dart';
+import '../../app/them.dart';
+import '../../app/them.dart';
+import '../../app/them.dart';
+import '../../app/them.dart';
 import '../../app/them.dart';
 
 class Auth extends StatefulWidget {
@@ -9,76 +17,93 @@ class Auth extends StatefulWidget {
 }
 
 class _AuthState extends State<Auth> {
-
   @override
   Widget build(BuildContext context) {
-
     final emailField = TextField(
       obscureText: false,
       style: AppTheme.title,
       decoration: InputDecoration(
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          hintText: "Email",
+          hintText: "Celular",
           border:
-          OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+              OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
     final passwordField = TextField(
       obscureText: true,
       style: AppTheme.title,
       decoration: InputDecoration(
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          hintText: "Password",
+          hintText: "Contraseña",
           border:
-          OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
-    );
-    final loginButon = Material(
-      elevation: 5.0,
-      borderRadius: BorderRadius.circular(30.0),
-      color: Color(0xff01A0C7),
-      child: MaterialButton(
-        minWidth: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        onPressed: () {},
-        child: Text("Login",
-            textAlign: TextAlign.center,
-            style: AppTheme.title),
-      ),
+              OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
 
     return Scaffold(
-      body: Center(
-        child: Container(
-          color: Colors.white,
-          child: Padding(
-            padding: const EdgeInsets.all(36.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                SizedBox(
-                  height: 155.0,
-                  child: Image.asset(
-                    "assets/logo.png",
-                    fit: BoxFit.contain,
-                  ),
-                ),
-                SizedBox(height: 45.0),
-                emailField,
-                SizedBox(height: 25.0),
-                passwordField,
-                SizedBox(
-                  height: 35.0,
-                ),
-                loginButon,
-                SizedBox(
-                  height: 15.0,
-                ),
-              ],
+      backgroundColor: AppTheme.tominAccent,
+      body: SafeArea(
+        child: ListView(
+          padding: EdgeInsets.symmetric(horizontal: 30, vertical: MediaQuery.of(context).size.height * .10),
+          children: <Widget>[
+            SizedBox(
+              height: MediaQuery.of(context).size.height * .3,
+              child: Image.asset(
+                "assets/logo.png",
+                fit: BoxFit.contain,
+              ),
             ),
-          ),
+            TextField(
+              keyboardType: TextInputType.numberWithOptions(
+                  decimal: false, signed: false),
+              autofocus: false,
+              style: TextStyle(fontSize: 20.0, color: AppTheme.secondary.withOpacity(0.8)),
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: AppTheme.smoke,
+                hintText: 'Celular',
+                contentPadding:
+                const EdgeInsets.only(left: 14.0, bottom: 12.0, top: 12.0),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white),
+                  borderRadius: BorderRadius.circular(25.7),
+                ),
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white),
+                  borderRadius: BorderRadius.circular(25.7),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 35.0,
+            ),
+            TextField(
+              autofocus: false,
+              style: TextStyle(fontSize: 20, color: AppTheme.secondary.withOpacity(0.8)),
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: AppTheme.smoke,
+                hintText: 'Contraseña',
+                contentPadding:
+                const EdgeInsets.only(left: 14.0, bottom: 12.0, top: 12.0),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white),
+                  borderRadius: BorderRadius.circular(25.7),
+                ),
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white),
+                  borderRadius: BorderRadius.circular(25.7),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 35.0,
+            ),
+            buttonLightAppPrimary('Ingresar', () {}),
+            SizedBox(
+              height: 15.0,
+            ),
+          ],
         ),
       ),
     );
   }
-
 }

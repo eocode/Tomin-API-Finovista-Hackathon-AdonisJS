@@ -122,7 +122,7 @@ Widget buttonLightApp(String text, VoidCallback onPressed) {
     margin: EdgeInsets.symmetric(vertical: 5),
     child: RaisedButton(
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
         child: Text(
           text.toUpperCase(),
           style: AppTheme.lightButtonText,

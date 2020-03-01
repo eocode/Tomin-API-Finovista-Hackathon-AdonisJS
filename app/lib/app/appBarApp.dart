@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:icofont_flutter/icofont_flutter.dart';
+import 'package:tomin/app/api/ApiAuth.dart';
 import 'package:tomin/app/them.dart';
 
 import 'generics.dart';
@@ -42,7 +43,7 @@ class _AppBarAppState extends State<AppBarApp> {
     setState(() {
       load = true;
     });
-    GraphAuth().logoutUser(context).then((status) {
+    ApiAuth().logout().then((status) {
       if (status) {
         setState(() {
           load = false;
