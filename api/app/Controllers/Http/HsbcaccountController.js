@@ -64,6 +64,18 @@ class HsbcaccountController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
+<<<<<<< HEAD
+  async getStatus({request, auth}){
+
+    const response = await auth.user.account().fetch()
+    const array = await response.direction().fetch()
+    console.log(array.dda)
+    const fetch = require("node-fetch");
+    var a;
+    await fetch(`${uri}/profile?accountNumber=${array.dda}`, {
+      method: 'GET',
+      headers: myHeaders,
+=======
   async getStatus({request}){
 
     const fetch = require("node-fetch");
@@ -72,12 +84,16 @@ class HsbcaccountController {
       method: 'GET',
       headers: myHeaders
       // ,body: JSON.stringify('{"name": "ingo"}')
+>>>>>>> eed35774d81f93aa61ae34492ee90384c7d97b7d
     })
     .then(response => response.json())
     .then(result => {
       a = result;
     })
+<<<<<<< HEAD
+=======
     console.log(await auth.user)
+>>>>>>> eed35774d81f93aa61ae34492ee90384c7d97b7d
     return { data: a }
 
   }
