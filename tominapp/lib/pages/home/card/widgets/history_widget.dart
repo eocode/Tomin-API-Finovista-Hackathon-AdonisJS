@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tominapp/app/them.dart';
-import 'package:tominapp/pages/home/challenge0/models/payment.dart';
-import 'package:tominapp/pages/home/challenge0/widgets/payment_widget.dart';
+import 'package:tominapp/pages/home/card/models/payment.dart';
+import 'package:tominapp/pages/home/card/widgets/payment_widget.dart';
 
 class HistoryWidget extends StatelessWidget {
   @override
@@ -10,29 +10,29 @@ class HistoryWidget extends StatelessWidget {
     payments.add(Payment(
         "https://tec-ps.com/wp-content/uploads/2018/10/USER.png",
         "User",
-        "Entertainment",
-        "12 Mar 2019",
+        "Pago a Proveedor",
+        "01 / 03 / 2020",
         10.0,
         -1));
     payments.add(Payment(
         "https://tec-ps.com/wp-content/uploads/2018/10/USER.png",
         "User",
-        "Food and Snacks",
-        "12 Mar 2019",
+        "Pago a Proveedor",
+        "01 / 03 / 2020",
         20.0,
         -1));
     payments.add(Payment(
         "https://tec-ps.com/wp-content/uploads/2018/10/USER.png",
         "User",
-        "Food and Snacks",
-        "12 Mar 2019",
+        "Pago a Proveedor",
+        "01 / 03 / 2020",
         30.0,
         -1));
     payments.add(Payment(
         "https://tec-ps.com/wp-content/uploads/2018/10/USER.png",
         "User",
-        "Swiggy",
-        "12 Mar 2019",
+        "Pago a Proveedor",
+        "01 / 03 / 2020",
         10.0,
         -1));
     return Column(

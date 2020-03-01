@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:provider/provider.dart';
-import 'package:tominapp/pages/home/challenge0/screens/payment_screen.dart';
 
 import 'app/router.dart';
-import 'app/them.dart';
 import 'app/user_preference.dart';
 
 void main() async {
@@ -34,15 +31,7 @@ class TApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 //    builder: (_) => ThemeChanger(ThemeList().getTheme(prefs.theme)
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(
-          create: null,
-          builder: (_) => ThemeChanger(ThemeList().getTheme(prefs.theme)),
-        )
-      ],
-      child: MaterialAppTheme(),
-    );
+    return MaterialAppTheme();
   }
 }
 
@@ -50,7 +39,6 @@ class MaterialAppTheme extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final prefs = new UserPreference();
-    final theme = Provider.of<ThemeChanger>(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       localizationsDelegates: [
@@ -61,7 +49,6 @@ class MaterialAppTheme extends StatelessWidget {
       supportedLocales: [
         const Locale('es', 'MX'), // Spanish
       ],
-      theme: theme.getTheme(),
       onGenerateRoute: Router.generateRoute,
       initialRoute: prefs.login ? '/' : '/',
       title: 'Tomin',

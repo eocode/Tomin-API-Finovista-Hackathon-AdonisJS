@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:tominapp/app/appBarApp.dart';
 import 'package:tominapp/app/user_preference.dart';
-import 'package:tominapp/pages/home/challenge0/screens/payment_screen.dart';
+import 'package:tominapp/pages/home/card/screens/payment_screen.dart';
 import 'package:tominapp/pages/Auth/Auth.dart';
 import 'package:tominapp/pages/home/HomePage.dart';
 

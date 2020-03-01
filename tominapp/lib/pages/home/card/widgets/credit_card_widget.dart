@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tominapp/pages/home/challenge0/models/credit_card.dart';
+import 'package:tominapp/pages/home/card/models/credit_card.dart';
 
 
 class CreditCardWidget extends StatelessWidget{

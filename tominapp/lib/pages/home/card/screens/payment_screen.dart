@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:tominapp/app/api/ApiAuth.dart';
 import 'package:tominapp/app/generics.dart';
 import 'package:tominapp/app/them.dart';
-import 'package:tominapp/pages/home/challenge0/models/credit_card.dart';
-import 'package:tominapp/pages/home/challenge0/screens/credit_card_screen.dart';
-import 'package:tominapp/pages/home/challenge0/widgets/credit_card_widget.dart';
-import 'package:tominapp/pages/home/challenge0/widgets/history_widget.dart';
-import 'package:tominapp/pages/home/challenge0/widgets/send_money_widget.dart';
+import 'package:tominapp/pages/home/card/models/credit_card.dart';
+import 'package:tominapp/pages/home/card/widgets/credit_card_widget.dart';
+import 'package:tominapp/pages/home/card/widgets/history_widget.dart';
+import 'package:tominapp/pages/home/card/widgets/send_money_widget.dart';
 
 class PaymentScreen extends StatefulWidget {
   @override

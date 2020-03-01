@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:icofont_flutter/icofont_flutter.dart';
-//import 'package:tominapp/app/scannData.dart';
 import 'package:tominapp/app/them.dart';
-import 'package:tominapp/pages/home/challenge0/widgets/user_widget.dart';
-import 'package:tominapp/pages/home/challenge0/models/user.dart';
-import 'package:tominapp/pages/home/challenge0/resources/database.dart' as db;
+import 'package:tominapp/pages/home/card/widgets/user_widget.dart';
+import 'package:tominapp/pages/home/card/models/user.dart';
+import 'package:tominapp/pages/home/card/resources/database.dart' as db;
 
 class SendMoneyWidget extends StatefulWidget {
   @override

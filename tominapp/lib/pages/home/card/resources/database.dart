@@ -1,8 +1,8 @@
-import 'package:tominapp/pages/home/challenge0/models/balance.dart';
+import 'package:tominapp/pages/home/card/models/balance.dart';
 //import 'package:charts_flutter/flutter.dart' as charts;
 import 'dart:math';
 
-import 'package:tominapp/pages/home/challenge0/models/user.dart';
+import 'package:tominapp/pages/home/card/models/user.dart';
 //
 //List<charts.Series<Balance, String>> _getSeries(List<String>timeValues,int max){
 //

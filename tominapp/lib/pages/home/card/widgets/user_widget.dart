@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tominapp/pages/home/challenge0/models/user.dart';
+import 'package:tominapp/pages/home/card/models/user.dart';
 
 class UserWidget extends StatelessWidget
 {

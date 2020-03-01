@@ -1,14 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:tominapp/pages/home/challenge0/models/balance.dart';
-import 'package:tominapp/pages/home/challenge0/models/credit_card.dart';
-import 'package:tominapp/pages/home/challenge0/models/domain.dart';
-import 'package:tominapp/pages/home/challenge0/widgets/credit_card_widget.dart';
-import 'package:tominapp/pages/home/challenge0/widgets/drop_widget.dart';
-import 'package:tominapp/pages/home/challenge0/widgets/group_bar_chart.dart';
-import 'package:tominapp/pages/home/challenge0/resources/database.dart' as db;
-import 'package:tominapp/pages/home/challenge0/widgets/history_widget.dart';
+import 'package:tominapp/pages/home/card/models/balance.dart';
+import 'package:tominapp/pages/home/card/models/credit_card.dart';
+import 'package:tominapp/pages/home/card/models/domain.dart';
+import 'package:tominapp/pages/home/card/widgets/credit_card_widget.dart';
+import 'package:tominapp/pages/home/card/widgets/drop_widget.dart';
+import 'package:tominapp/pages/home/card/widgets/group_bar_chart.dart';
+import 'package:tominapp/pages/home/card/resources/database.dart' as db;
+import 'package:tominapp/pages/home/card/widgets/history_widget.dart';
 //import 'package:charts_flutter/flutter.dart' as charts;
 //
 //class CreditCardScreen extends StatefulWidget{

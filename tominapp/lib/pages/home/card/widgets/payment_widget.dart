@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tominapp/pages/home/challenge0/models/payment.dart';
+import 'package:tominapp/pages/home/card/models/payment.dart';
 
 class PaymentWidget extends StatefulWidget{
   final Payment payment;

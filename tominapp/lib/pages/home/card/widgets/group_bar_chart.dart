@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tominapp/pages/home/challenge0/models/balance.dart';
-import 'package:tominapp/pages/home/challenge0/models/domain.dart';
+import 'package:tominapp/pages/home/card/models/balance.dart';
+import 'package:tominapp/pages/home/card/models/domain.dart';
 //import 'package:charts_flutter/flutter.dart' as charts;
 //import 'dart:math';
 //
