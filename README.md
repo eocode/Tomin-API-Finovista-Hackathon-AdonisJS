@@ -53,3 +53,6 @@ Preparar ambiente
 adonis migration:run
 adonis serve --dev
 ```
+
+## API KEY HSBC
+JYOfFaVnQH6poDGoaOp2mamgp9emrHOm2QVCfU19
