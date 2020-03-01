@@ -1,7 +1,16 @@
 "use strict";
 const User = use("App/Models/User");
+const uri = "https://mwiuw3q1fj.execute-api.us-east-1.amazonaws.com/dev/v1/sandbox/checking-accounts";
+const myHeaders = {
+ "X-Client": "7a12c63188f34e4ba2a788d53c0aa6b6",
+ "X-User": 'TEAM8',
+ "X-Password": "62fDE1473EeD4772aCb4080d3c42C546",
+ "x-api-key": "JYOfFaVnQH6poDGoaOp2mamgp9emrHOm2QVCfU19",
+ "id": "hello",
+};
 
 class UserController {
+
   /**
    * LOGIN.
    * POST ejemplos
@@ -11,8 +20,8 @@ class UserController {
    * @param {Response} ctx.response
    */
   async login({request, auth}) {
-    const { email, password } = request.all();
-    const token = await auth.attempt(email,password);
+    const { cellphone, password } = request.all();
+    const token = await auth.attempt(cellphone,password);
     return token;
   }
 
@@ -25,31 +34,24 @@ class UserController {
     	a = result;
     })
     console.log(a)
-    return { a: a }
+    return { data: a }
   }
 
   async testFetch({request}){
-    var uri = "https://mwiuw3q1fj.execute-api.us-east-1.amazonaws.com/dev/v1/sandbox/checking-accounts";
-    var myHeaders = {
-      "X-Client": "7a12c63188f34e4ba2a788d53c0aa6b6",
-      "X-User": 'TEAM8',
-      "X-Password": "62fDE1473EeD4772aCb4080d3c42C546",
-      "x-api-key": "JYOfFaVnQH6poDGoaOp2mamgp9emrHOm2QVCfU19",
-      "id": "hello",
-    };
+
     const fetch = require("node-fetch");
     var a;
-    await fetch(`${uri}/profile?accountNumber=4077641280`, {
+    await fetch(`${uri}/profile`, {
       method: 'GET',
-      headers: myHeaders
-      // ,body: JSON.stringify('{"name": "ingo"}')
+      headers: myHeaders,
+      body: JSON.stringify('{"accountNumber": "4077641280"}')
     })
     .then(response => response.json())
     .then(result => {
     	a = result;
     })
     console.log(a)
-    return { a: a }
+    return { data: a }
   }
 
   /**
