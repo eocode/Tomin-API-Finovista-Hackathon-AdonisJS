@@ -7,6 +7,11 @@ const Model = use('Model')
 const Hash = use('Hash')
 
 class User extends Model {
+
+  account(){
+    return this.hasOne('App/Models/Account')
+  }
+
   static boot () {
     super.boot()
 

@@ -8,7 +8,8 @@ class AccountSchema extends Schema {
     this.create('accounts', (table) => {
       table.increments()
       table.integer('cis').unsigned().unique()
-      table.string('cliente', 255).notNullable().unique().index()
+      table.string('client', 255).notNullable().unique().index()
+      table.integer('user_id').unsigned().references('id').inTable('users')
       table.timestamps()
     })
   }

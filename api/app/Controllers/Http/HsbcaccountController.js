@@ -7,16 +7,18 @@
 /**
  * Resourceful controller for interacting with hsbcaccounts
  */
-class HsbcaccountController {
 
-  uri = "https://mwiuw3q1fj.execute-api.us-east-1.amazonaws.com/dev/v1/sandbox/checking-accounts";
-  myHeaders = new Headers({
-    "X-Client": "7a12c63188f34e4ba2a788d53c0aa6b6",
-    "X-User": 'TEAM8',
-    "X-Password": "62fDE1473EeD4772aCb4080d3c42C546",
-    "x-api-key": "JYOfFaVnQH6poDGoaOp2mamgp9emrHOm2QVCfU19",
-    "id": "hello",
-  });
+const User = use("App/Models/User");
+const uri = "https://mwiuw3q1fj.execute-api.us-east-1.amazonaws.com/dev/v1/sandbox/checking-accounts";
+const myHeaders = {
+ "X-Client": "7a12c63188f34e4ba2a788d53c0aa6b6",
+ "X-User": 'TEAM8',
+ "X-Password": "62fDE1473EeD4772aCb4080d3c42C546",
+ "x-api-key": "JYOfFaVnQH6poDGoaOp2mamgp9emrHOm2QVCfU19",
+ "id": "hello",
+};
+
+class HsbcaccountController {
 
   /**
    * Show a list of all hsbcaccounts.
@@ -62,19 +64,25 @@ class HsbcaccountController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async getStatus({ params, request, response, view }) {
-    
-    var miInit = { method: 'GET',
-                   headers: myHeaders};
-    
-    fetch(`${uri}/profile?accountNumber=4077641280`,miInit)
-    .then(function(response) {
-      console.log(response);
-      return response.accountProfile();
+  async getStatus({request, auth}){
 
-    });
-    
+    const response = await auth.user.account().fetch()
+    const array = await response.direction().fetch()
+    console.log(array.dda)
+    const fetch = require("node-fetch");
+    var a;
+    await fetch(`${uri}/profile?accountNumber=${array.dda}`, {
+      method: 'GET',
+      headers: myHeaders,
+    })
+    .then(response => response.json())
+    .then(result => {
+      a = result;
+    })
+    return { data: a }
+
   }
+  
 
   /**
    * Render a form to update an existing hsbcaccount.

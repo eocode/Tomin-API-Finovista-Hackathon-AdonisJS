@@ -7,10 +7,10 @@ class DirectionSchema extends Schema {
   up () {
     this.create('directions', (table) => {
       table.increments()
-      table.integer('cid').unsigned().unique().references('cis').inTable('accounts')
-      table.integer('dda').unsigned().unique()
+      table.bigInteger('dda').unsigned().unique()
       table.float('saldo').unsigned()
       table.integer('subpr').unsigned()
+      table.integer('account_id').unsigned().references('id').inTable('accounts')
       table.timestamps()
     })
   }
