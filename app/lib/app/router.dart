@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:tomin/app/appBarApp.dart';
 import 'package:tomin/app/user_preference.dart';
+import 'package:tomin/pages/Auth/Auth.dart';
+import 'package:tomin/pages/home/HomePage.dart';
 
 class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {

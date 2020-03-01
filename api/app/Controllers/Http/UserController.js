@@ -16,6 +16,10 @@ class UserController {
     return token;
   }
 
+  async axios({request}){
+    const Axios = use('Axios');
+  }
+
   /**
    * Create/save a new ejemplo.
    * POST ejemplos

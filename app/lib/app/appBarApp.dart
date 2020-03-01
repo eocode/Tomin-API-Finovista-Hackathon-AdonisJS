@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:icofont_flutter/icofont_flutter.dart';
 import 'package:tomin/app/them.dart';
 
+import 'generics.dart';
+import 'user_preference.dart';
+
 // ignore: must_be_immutable
 class AppBarApp extends StatefulWidget implements PreferredSizeWidget {
   String title;
@@ -54,7 +57,7 @@ class _AppBarAppState extends State<AppBarApp> {
         ? loading(true, 0, 20)
         : FlatButton(
       onPressed: _closeSession,
-      color: AppTheme.lesquiLight,
+      color: AppTheme.tominLight,
       child: Row(
         children: <Widget>[
           Icon(

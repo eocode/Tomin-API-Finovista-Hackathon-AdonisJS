@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:icofont_flutter/icofont_flutter.dart';
 import 'package:shimmer/shimmer.dart';
 
+import 'them.dart';
+import 'user_preference.dart';
+
 class ShimmerLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -58,7 +61,7 @@ class ShimmerListLoading extends StatelessWidget {
       children: List.generate(n, (index) {
         return Shimmer.fromColors(
           highlightColor: AppTheme.white,
-          baseColor: AppTheme.lesquiLight.withOpacity(0.6),
+          baseColor: AppTheme.tominLight.withOpacity(0.6),
           child: ShimmerLayout(),
           enabled: true,
         );
@@ -128,7 +131,7 @@ Widget buttonLightApp(String text, VoidCallback onPressed) {
       onPressed: onPressed,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       elevation: 0,
-      color: AppTheme.lesquiLight,
+      color: AppTheme.tominLight,
     ),
   );
 }
@@ -168,7 +171,7 @@ Widget buttonPayment(String text, VoidCallback onPressed) {
       onPressed: onPressed,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
       elevation: 0,
-      color: AppTheme.lesquiLight,
+      color: AppTheme.tominLight,
     ),
   );
 }
@@ -198,7 +201,7 @@ Widget buttonConfirmPay(
                 color: AppTheme.secondary.withOpacity(0.7),
               ),
               backgroundColor:
-                  inactive ? AppTheme.smoke : AppTheme.lesquiAccent,
+                  inactive ? AppTheme.smoke : AppTheme.tominAccent,
             ),
           ],
         ),
@@ -206,7 +209,7 @@ Widget buttonConfirmPay(
       onPressed: inactive ? null : onPressed,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
       elevation: 0,
-      color: AppTheme.lesquiPrimary,
+      color: AppTheme.tominPrimary,
     ),
   );
 }
@@ -233,7 +236,7 @@ Widget buttonScan(String text, VoidCallback onPressed, IconData icon) {
                 icon,
                 color: AppTheme.secondary.withOpacity(0.7),
               ),
-              backgroundColor: AppTheme.lesquiAccent,
+              backgroundColor: AppTheme.tominAccent,
             ),
           ],
         ),
@@ -241,7 +244,7 @@ Widget buttonScan(String text, VoidCallback onPressed, IconData icon) {
       onPressed: onPressed,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
       elevation: 0,
-      color: AppTheme.lesquiLight,
+      color: AppTheme.tominLight,
     ),
   );
 }
@@ -297,7 +300,7 @@ Widget buttonAppIcon(IconData icon, VoidCallback onPressed) {
     onPressed: onPressed,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
     elevation: 5,
-    color: AppTheme.lesquiLight,
+    color: AppTheme.tominLight,
   );
 }
 
@@ -330,7 +333,7 @@ Widget error(String error) {
                 leading: Icon(
                   IcoFontIcons.warning,
                   size: 50,
-                  color: AppTheme.lesquiAccent,
+                  color: AppTheme.tominAccent,
                 ),
               ),
             )),
@@ -344,7 +347,7 @@ Widget loading(bool dark, double vertical, double horizontal) {
       padding: EdgeInsets.symmetric(vertical: vertical, horizontal: horizontal),
       child: Center(
           child: CircularProgressIndicator(
-        backgroundColor: dark ? AppTheme.secondary : AppTheme.lesqui,
+        backgroundColor: dark ? AppTheme.secondary : AppTheme.tomin,
       )));
 }
 
@@ -355,8 +358,8 @@ Widget brand(BuildContext context) {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Text(
-          'lesqui',
-          style: AppTheme.lesquiBrand(),
+          'tomin',
+          style: AppTheme.tominBrand(),
         ),
       ),
     ),
