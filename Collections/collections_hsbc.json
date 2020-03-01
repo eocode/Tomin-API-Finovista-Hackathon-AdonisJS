@@ -1,0 +1,583 @@
+{
+	"info": {
+		"_postman_id": "2d778bf1-f410-41d4-9481-7f511fde2b98",
+		"name": "Hackathon HSBC-AWS-AW 2020",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Query Account Statement AWS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Client",
+						"value": "0425c644a72d4ec7bdf15c5d29b705b6"
+					},
+					{
+						"key": "X-User",
+						"value": "HACKATON"
+					},
+					{
+						"key": "X-Password",
+						"value": "4d0313fcB8f54387bbfa67Da4E8eb7Ea"
+					},
+					{
+						"key": "x-api-key",
+						"value": "3qOCFn4RvZpSgrVyPy3g2FmVA4WQirambMTDzmf0"
+					}
+				],
+				"url": {
+					"raw": "https://mwiuw3q1fj.execute-api.us-east-1.amazonaws.com/dev/v1/sandbox/checking-accounts/account-statement?accountNumber=4004410536&movementsNumber=90",
+					"protocol": "https",
+					"host": [
+						"mwiuw3q1fj",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"v1",
+						"sandbox",
+						"checking-accounts",
+						"account-statement"
+					],
+					"query": [
+						{
+							"key": "accountNumber",
+							"value": "4004410536"
+						},
+						{
+							"key": "movementsNumber",
+							"value": "90"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query checking-accounts balance AWS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Client",
+						"value": "0425c644a72d4ec7bdf15c5d29b705b6"
+					},
+					{
+						"key": "X-User",
+						"value": "HACKATON"
+					},
+					{
+						"key": "X-Password",
+						"value": "4d0313fcB8f54387bbfa67Da4E8eb7Ea"
+					},
+					{
+						"key": "x-api-key",
+						"value": "QoAvB9ddiF9udhlvD5U7818VdwrlqUcd1Jv5Ypqi"
+					}
+				],
+				"url": {
+					"raw": "https://mwiuw3q1fj.execute-api.us-east-1.amazonaws.com/dev/v1/sandbox/checking-accounts/balance?accountNumber=4023001449",
+					"protocol": "https",
+					"host": [
+						"mwiuw3q1fj",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"v1",
+						"sandbox",
+						"checking-accounts",
+						"balance"
+					],
+					"query": [
+						{
+							"key": "accountNumber",
+							"value": "4023001449"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Account Profile AWS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Client",
+						"value": "0425c644a72d4ec7bdf15c5d29b705b6"
+					},
+					{
+						"key": "X-User",
+						"value": "HACKATON"
+					},
+					{
+						"key": "X-Password",
+						"value": "4d0313fcB8f54387bbfa67Da4E8eb7Ea"
+					},
+					{
+						"key": "x-api-key",
+						"value": "QoAvB9ddiF9udhlvD5U7818VdwrlqUcd1Jv5Ypqi"
+					},
+					{
+						"key": "id",
+						"value": "hello",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://mwiuw3q1fj.execute-api.us-east-1.amazonaws.com/dev/v1/sandbox/checking-accounts/profile?accountNumber=4004410536",
+					"protocol": "https",
+					"host": [
+						"mwiuw3q1fj",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"v1",
+						"sandbox",
+						"checking-accounts",
+						"profile"
+					],
+					"query": [
+						{
+							"key": "accountNumber",
+							"value": "4004410536"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Monetary Operation Checking Accounts Transfer AWS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Client",
+						"value": "0425c644a72d4ec7bdf15c5d29b705b6"
+					},
+					{
+						"key": "X-User",
+						"value": "HACKATON"
+					},
+					{
+						"key": "X-Password",
+						"value": "4d0313fcB8f54387bbfa67Da4E8eb7Ea"
+					},
+					{
+						"key": "x-api-key",
+						"value": "QoAvB9ddiF9udhlvD5U7818VdwrlqUcd1Jv5Ypqi"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"transaction\": {\r\n    \"sourceAccount\": \"4004410544\",\r\n    \"destinationAccount\": \"4004410536\",\r\n    \"transactionAmount\": \"1.00\",\r\n    \"description\": \"TRANSFERENCIA HACKATON\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "https://mwiuw3q1fj.execute-api.us-east-1.amazonaws.com/dev/v1/sandbox/checking-accounts/transfer",
+					"protocol": "https",
+					"host": [
+						"mwiuw3q1fj",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"v1",
+						"sandbox",
+						"checking-accounts",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Customer Profile by client_number AWS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Client",
+						"value": "0425c644a72d4ec7bdf15c5d29b705b6"
+					},
+					{
+						"key": "X-User",
+						"value": "HACKATON"
+					},
+					{
+						"key": "X-Password",
+						"value": "4d0313fcB8f54387bbfa67Da4E8eb7Ea"
+					},
+					{
+						"key": "x-api-key",
+						"value": "QoAvB9ddiF9udhlvD5U7818VdwrlqUcd1Jv5Ypqi"
+					}
+				],
+				"url": {
+					"raw": "https://mwiuw3q1fj.execute-api.us-east-1.amazonaws.com/dev/v1/sandbox/clients/8790814/profile",
+					"protocol": "https",
+					"host": [
+						"mwiuw3q1fj",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"v1",
+						"sandbox",
+						"clients",
+						"8790814",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send eMail AWS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Client",
+						"value": "0425c644a72d4ec7bdf15c5d29b705b6"
+					},
+					{
+						"key": "X-User",
+						"value": "HACKATON"
+					},
+					{
+						"key": "X-Password",
+						"value": "4d0313fcB8f54387bbfa67Da4E8eb7Ea"
+					},
+					{
+						"key": "x-api-key",
+						"value": "QoAvB9ddiF9udhlvD5U7818VdwrlqUcd1Jv5Ypqi"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": {\r\n    \"emailAddress\": \"edgar.lopez.isc@gmail.com\",\r\n    \"subject\": \"Hackaton HSBC. México\",\r\n    \"message\": \"Mensaje enviado con fines de prueba favor de no responder\"\r\n  }\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://mwiuw3q1fj.execute-api.us-east-1.amazonaws.com/dev/v1/sandbox/messaging-services/email",
+					"protocol": "https",
+					"host": [
+						"mwiuw3q1fj",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"v1",
+						"sandbox",
+						"messaging-services",
+						"email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send SMS AWS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Client",
+						"value": "0425c644a72d4ec7bdf15c5d29b705b6"
+					},
+					{
+						"key": "X-User",
+						"value": "HACKATON"
+					},
+					{
+						"key": "X-Password",
+						"value": "4d0313fcB8f54387bbfa67Da4E8eb7Ea"
+					},
+					{
+						"key": "x-api-key",
+						"value": "QoAvB9ddiF9udhlvD5U7818VdwrlqUcd1Jv5Ypqi"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"sms\": {\r\n\t\t\"mobilePhoneNumber\": \"+525562921919\",\r\n\t\t\"message\": \"Prueba de SMS\"\r\n\t}\r\n}"
+				},
+				"url": {
+					"raw": "https://mwiuw3q1fj.execute-api.us-east-1.amazonaws.com/dev/v1/sandbox/messaging-services/sms",
+					"protocol": "https",
+					"host": [
+						"mwiuw3q1fj",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"v1",
+						"sandbox",
+						"messaging-services",
+						"sms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QR Code generation String AWS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Client",
+						"value": "0425c644a72d4ec7bdf15c5d29b705b6"
+					},
+					{
+						"key": "X-User",
+						"value": "HACKATON"
+					},
+					{
+						"key": "X-Password",
+						"value": "4d0313fcB8f54387bbfa67Da4E8eb7Ea"
+					},
+					{
+						"key": "x-api-key",
+						"value": "QoAvB9ddiF9udhlvD5U7818VdwrlqUcd1Jv5Ypqi"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"inputString\": \"AngelHack 2019: Mexico\"\r\n}"
+				},
+				"url": {
+					"raw": "https://mwiuw3q1fj.execute-api.us-east-1.amazonaws.com/dev/v1/sandbox/qr-code/qr-input-string",
+					"protocol": "https",
+					"host": [
+						"mwiuw3q1fj",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"v1",
+						"sandbox",
+						"qr-code",
+						"qr-input-string"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QR Code generation Transfer AWS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Client",
+						"value": "0425c644a72d4ec7bdf15c5d29b705b6"
+					},
+					{
+						"key": "X-User",
+						"value": "HACKATON"
+					},
+					{
+						"key": "X-Password",
+						"value": "4d0313fcB8f54387bbfa67Da4E8eb7Ea"
+					},
+					{
+						"key": "x-api-key",
+						"value": "QoAvB9ddiF9udhlvD5U7818VdwrlqUcd1Jv5Ypqi"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sourceAccount\":\"0000000000\",\r\n    \"destinationAccount\": \"0000000000\",\r\n    \"transactionAmount\": \"300.00\",\r\n    \"operationDate\": \"20190603\",\r\n    \"description\": \"TRANSFERENCIA HACKATON\"\r\n}"
+				},
+				"url": {
+					"raw": "https://mwiuw3q1fj.execute-api.us-east-1.amazonaws.com/dev/v1/sandbox/qr-code/qr-transfer",
+					"protocol": "https",
+					"host": [
+						"mwiuw3q1fj",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"v1",
+						"sandbox",
+						"qr-code",
+						"qr-transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checking account balance by account_number AWS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Client",
+						"value": "0425c644a72d4ec7bdf15c5d29b705b6"
+					},
+					{
+						"key": "X-User",
+						"value": "HACKATON"
+					},
+					{
+						"key": "X-Password",
+						"value": "4d0313fcB8f54387bbfa67Da4E8eb7Ea"
+					},
+					{
+						"key": "x-api-key",
+						"value": "QoAvB9ddiF9udhlvD5U7818VdwrlqUcd1Jv5Ypqi"
+					}
+				],
+				"url": {
+					"raw": "https://mwiuw3q1fj.execute-api.us-east-1.amazonaws.com/dev/v1/sandbox/checking-accounts/4023001449/balance",
+					"protocol": "https",
+					"host": [
+						"mwiuw3q1fj",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"v1",
+						"sandbox",
+						"checking-accounts",
+						"4023001449",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Open Bank ATMs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hsbc.com.mx/open-banking/v1.0/atms",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hsbc",
+						"com",
+						"mx"
+					],
+					"path": [
+						"open-banking",
+						"v1.0",
+						"atms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Open Bank ATMs Country ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hsbc.com.mx/x-open-banking/v1.0/atms/country/MX",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hsbc",
+						"com",
+						"mx"
+					],
+					"path": [
+						"x-open-banking",
+						"v1.0",
+						"atms",
+						"country",
+						"MX"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Open Bank ATMs Town",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hsbc.com.mx/x-open-banking/v1.0/atms/country/MX/town/Metepec",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hsbc",
+						"com",
+						"mx"
+					],
+					"path": [
+						"x-open-banking",
+						"v1.0",
+						"atms",
+						"country",
+						"MX",
+						"town",
+						"Metepec"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
