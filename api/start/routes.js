@@ -23,4 +23,6 @@ Route.get('/', () => {
 Route.group(() => {
   Route.post('users/register', 'UserController.store')
   Route.post('users/login', 'UserController.login')
+  Route.get('users/account/status', 'HsbcaccountController.getStatus')
+
 }).prefix('api/v1')
